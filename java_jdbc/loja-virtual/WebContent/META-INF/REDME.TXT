@@ -1,0 +1,12 @@
+Pasta lib (WebContent/WEB-INF/lib)
+Subir o banco 
+java -cp hsqldb.jar org.hsqldb.server.Server
+
+Criar o banco
+java -cp hsqldb.jar org.hsqldb.server.Server --database.0 file:loja-virtual --dbname.0 loja-virtual
+
+Manager do banco
+java -cp hsqldb.jar  org.hsqldb.util.DatabaseManager
+colocar como server
+e a url: jdbc:hsqldb:hsql://localhost/loja-virtual
+

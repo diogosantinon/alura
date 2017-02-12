@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<venda moeda="real">
+	<formaPagamento>Cartão</formaPagamento>
+	<endereco></endereco>
+	<produtos>
+		<produto>
+			<nome>Livro de XML</nome>
+			<preco>29.90</preco>
+		</produto>
+		<produto>
+			<nome>Orientacao O.O java</nome>
+			<preco>29.90</preco>
+		</produto>
+	</produtos>
+</venda>

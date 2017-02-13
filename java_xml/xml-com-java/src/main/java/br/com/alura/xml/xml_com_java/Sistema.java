@@ -17,6 +17,10 @@ public class Sistema {
 
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		//usar validacao xsd
+		factory.setValidating(true);
+		factory.setNamespaceAware(true);
+		factory.setAttribute("http://java.sun.com/xml/jaxp/properties/schemaLanguage", "http://www.w3.org/2001/XMLSchema");
 		DocumentBuilder builder = factory.newDocumentBuilder();
 		Document document = builder.parse("src/Vendas.xml");
 		

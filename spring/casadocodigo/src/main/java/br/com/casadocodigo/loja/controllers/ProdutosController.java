@@ -5,6 +5,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -49,6 +50,7 @@ public class ProdutosController {
 	
 	//@RequestMapping(value="/produtos", method=RequestMethod.POST)
 	@RequestMapping(method=RequestMethod.POST)
+	@CacheEvict(value="produtosHome", allEntries=true)//qdo chamado limpa a chache do HomeController
 	public ModelAndView gravar(MultipartFile sumario, @Valid Produto produto, BindingResult result, RedirectAttributes redirectAttributes){
 	    if(result.hasErrors()){
 	        return form(produto);

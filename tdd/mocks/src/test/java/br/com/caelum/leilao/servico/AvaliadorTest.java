@@ -25,8 +25,8 @@ public class AvaliadorTest {
 	@Before
 	public void criaAvaliador() {
 		this.leiloeiro = new Avaliador();
-		this.joao = new Usuario("João");
-		this.jose = new Usuario("José");
+		this.joao = new Usuario("Joao");
+		this.jose = new Usuario("Jose");
 		this.maria = new Usuario("Maria");
 	}
 	
@@ -58,7 +58,7 @@ public class AvaliadorTest {
  
     @Test
     public void deveEntenderLeilaoComApenasUmLance() {
-    	Usuario joao = new Usuario("João");
+    	Usuario joao = new Usuario("Joao");
         Leilao leilao = new Leilao("Playstation 3 Novo");
          
         leilao.propoe(new Lance(joao, 1000.0));

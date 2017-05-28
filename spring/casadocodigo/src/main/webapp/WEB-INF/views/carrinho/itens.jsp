@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,7 +46,7 @@
 
 	<header id="layout-header">
 		<div class="clearfix container">
-			<a href="/" id="logo"> </a>
+			<a href="${s:mvcUrl('HC#index').build()}" id="logo"> </a>
 			<div id="header-content">
 				<nav id="main-nav">
 
@@ -127,9 +128,9 @@
 			<tfoot>
 				<tr>
 				        <td colspan="3">
-		        	<form action="${s:mvcUrl('PC#finalizar').build()}" method="post">
+		        	<form:form action="${s:mvcUrl('PC#finalizar').build()}" method="post">
 				            <input type="submit" class="checkout" name="checkout" value="Finalizar compra" />
-			        </form>
+			        </form:form>
 				        </td>
 				        <td class="quantity-input-cell">
 				            <input type="submit" class="update-cart" disabled="disabled" name="update" value="" />

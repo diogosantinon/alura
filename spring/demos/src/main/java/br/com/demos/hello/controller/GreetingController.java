@@ -19,8 +19,6 @@ public class GreetingController {
 	@Autowired
 	private RestTemplate restTemplate;
 	
-
-	
 	private static final Logger logger = LoggerFactory.getLogger(GreetingController.class);
 	private static final String template = "Hello, %s!";
 	private final AtomicLong counter = new AtomicLong();

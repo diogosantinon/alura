@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+
+
+<input/>
+<button>Compare com o meu segredo!</button>
+
+<script type="text/javascript">
+	function pulaLinha() {
+		document.write("<br>");
+	}
+
+	function exibe(mensagem) {
+		document.write(mensagem);
+		pulaLinha();
+	}
+
+	function limpa() {
+		input.value = "";
+		input.focus();
+	}
+
+	function sorteia(numero) {
+		return Math.round(Math.random() * numero);
+	}
+
+    var numeroPensado = sorteia(5);	
+
+	function verifica() {
+		
+	    if(numeroPensado == input.value) {
+	        alert("Parabéns! Você acertou o número secreto");
+	    }
+	    else {
+	        alert("Infelizmente você errou!");
+	    }
+	    limpa();
+	    numeroPensado = sorteia(5);
+	}	
+	var input = document.querySelector("input");
+	var button = document.querySelector("button");
+	button.onclick = verifica;
+
+</script>

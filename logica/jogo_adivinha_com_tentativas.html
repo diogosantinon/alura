@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+	function pulaLinha() {
+		document.write("<br>");
+	}
+
+	function exibe(mensagem) {
+		document.write(mensagem);
+		pulaLinha();
+	}
+
+	function sorteia(numero) {
+		return Math.round(Math.random() * numero);
+	}
+
+    var numeroPensado = sorteia(5);
+
+	var tentativas = prompt("Quantas tentativas?");
+	var numeroTentativa = 1;
+
+	while(numeroTentativa <= tentativas) {
+
+	    var chute = prompt("Já pensei. Qual você acha que é?");
+	    
+	    if(chute == numeroPensado) {
+	        exibe("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+	        break;
+	    } else {
+	    	if(chute > numeroPensado) {
+				exibe("Você errou! seu numero é maior !");
+	    	} else {
+	    		exibe("Você errou! seu numero é menor !");
+	    	}
+	    	
+		}
+		numeroTentativa++;
+	}
+
+</script>

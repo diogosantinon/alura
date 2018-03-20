@@ -16,10 +16,11 @@
 
 	function desenhaCirculo(evento) {
 		var x = evento.pageX - tela.offsetLeft;
-		var y = evento.pageY; - tela.offsetTop;
+		var y = evento.pageY - tela.offsetTop;
 		
         if (evento.shiftKey && evento.altKey) {
             alert('Só aperte uma tecla por vez, por favor!');
+            return;
 		}else if(evento.shiftKey && raio < 40) {
 			raio += 5;
 		} else if(evento.ctrlKey && raio > 10) {
@@ -42,6 +43,7 @@
 		} else {
 			corAtual = 0;
 		}
+		// menu contextual padrão do canvas não seja exibido
 		return false;
 	}
 

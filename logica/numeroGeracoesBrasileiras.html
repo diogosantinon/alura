@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+	
+	function pulaLinha() {
+		document.write("<br>");
+	}
+
+	function exibe(mensagem) {
+		document.write(mensagem);
+		pulaLinha();
+	}
+
+	var tempoGeracao = 28;
+	var anoDescobrimento = 1500;
+	var anoAtual = new Date().getFullYear();
+	var quantidadeAnos = anoAtual - anoDescobrimento;
+	var quantidadeGeracoes = quantidadeAnos / tempoGeracao;	
+
+	exibe("Número de Gerações desde " + anoDescobrimento + ": " + Math.round(quantidadeGeracoes));
+
+</script>

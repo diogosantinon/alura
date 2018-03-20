@@ -245,6 +245,16 @@ body {
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
     position: relative;
+/*background-color:#312d28;
+background-image: linear-gradient(to right, rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(to right, rgba(255,255,255,.3) 1px, transparent 1px);
+background-size: 50px 50px, 10px 30px;
+background-repeat: repeat-x;
+background-position: 0 bottom;*/
+
+    background-image: linear-gradient(to left, #F00, #000 80%, #000);
+    /*background-size : 100%, 200px;*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
 }
 .banner-twitter {
     position: absolute;

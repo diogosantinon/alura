@@ -1,12 +1,12 @@
 <meta charset="UTF-8">
 
-<canvas width="600" height="400">
+<canvas id="tela" width="600" height="400">
 	
 
 </canvas>
 
 <script>
-	var tela = document.querySelector('canvas');
+	var tela = document.querySelector('#tela');
 	//desenhar em 2d
 	var pincel = tela.getContext('2d');
 
@@ -17,14 +17,14 @@
 
 
 	pincel.fillStyle = 'white';
-	pincel.fillRect(200, 0, 600, 400);
+	pincel.fillRect(200, 0, 400, 400);
 
 
 	pincel.fillStyle = 'red';
-	pincel.fillRect(400,0,200,400);
+	pincel.fillRect(400,0,600,400);
 
 	//desenhar triangulo
-	pincel.fillStyle = 'yellow';
+	pincel.fillStyle = 'gray';
 	pincel.beginPath();
 	pincel.moveTo(300, 200);
 	pincel.lineTo(200, 400);
@@ -41,7 +41,7 @@
 
 	pincel.fillStyle = 'blue';
 	pincel.beginPath();
-	pincel.arc(100, 200, 50, 0, 2 * 3.14);
+	pincel.arc(300, 200, 50, 0, 2 * Math.PI);
 	pincel.fill();
 
 </script>

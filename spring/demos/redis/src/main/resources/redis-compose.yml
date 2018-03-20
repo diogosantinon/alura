@@ -1,0 +1,4 @@
+redis:                                                                          
+  image: pyro225/redis-32bit
+ports:
+  - "6379:6379" 

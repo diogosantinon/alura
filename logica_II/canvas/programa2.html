@@ -14,7 +14,7 @@
 
 		pincel.fillStyle = cor;
 		pincel.fillRect(x,y,l,h);
-		pincel.fillStroke = corBorda;
+		pincel.strokeStyle = corBorda;
 		pincel.strokeRect(x,y,l,h);		
 	}
 
@@ -22,8 +22,15 @@
 	while (x < 600) {
 		desenhaQuadrado(x,0,50,50, 'green', 'black');		
 		desenhaQuadrado(x,50,50,50, 'blue', 'black');
+		desenhaQuadrado(x,100,50,50, 'red', 'black');
 		x +=50;
 	}
+
+	// for (var x = 0; x < 600; x = x + 50) {
+
+	// 	desenhaQuadrado(x,0,50,50, 'green', 'black');		
+	// 	desenhaQuadrado(x,50,50,50, 'blue', 'black');
+	// }
 
 	
 </script>

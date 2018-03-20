@@ -18,4 +18,5 @@
 cite {
 	font-style: italic;
 	float: right;
+	display: block;
 }

@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+	function pulaLinha() {
+		document.write("<br>");
+	}
+
+	function exibe(mensagem) {
+		document.write(mensagem);
+		pulaLinha();
+	}
+
+	function getIdade(nascimento) {
+		var anoAtual = new Date().getFullYear();	
+
+		return anoAtual - nascimento;
+	}
+
+	
+	var anoNascimentoMano = 1979;
+	var anoNascimento = 1983;
+
+	var idadeMano = getIdade(anoNascimentoMano);
+	var idadeMinha = getIdade(anoNascimento);
+
+	exibe("A diferença de idades é de: " + Math.round(idadeMano - idadeMinha));
+
+</script>

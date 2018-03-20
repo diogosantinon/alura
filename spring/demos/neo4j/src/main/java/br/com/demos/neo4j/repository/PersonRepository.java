@@ -1,13 +1,10 @@
 package br.com.demos.neo4j.repository;
 
-import org.springframework.data.neo4j.repository.GraphRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.repository.CrudRepository;
 
 import br.com.demos.neo4j.entity.Person;
 
-@Repository
-public interface PersonRepository extends GraphRepository<Person> {
-	
-	Person findByName(String name);
+public interface PersonRepository extends CrudRepository<Person, Long> {
 
+    Person findByName(String name);
 }
